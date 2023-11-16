@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Cars Information</title>
+  <title>Document</title>
 </head>
+
 <body>
   <table border="1" align="center">
     <tr align="center" bgcolor="Grey">
@@ -16,15 +19,13 @@
       <td align="center">Year</td>
       <td align="center">Owner Name</td>
     </tr>
-
-    {% for c in allc %}
     <tr>
-      <td align="center">{{ c.license }}</td>
-      <td align="center">{{ c.model }}</td>
-      <td align="center">{{ c.year }}</td>
-      <td align="center">{{ c.person.name }}</td>
+      <td align="center">{{ post.license }}</td>
+      <td align="center">{{ post.model }}</td>
+      <td align="center">{{ post.year }}</td>
+      <td align="center">{{ post.person }}</td>
     </tr>
-    {% endfor %}
   </table>
 </body>
+
 </html>
