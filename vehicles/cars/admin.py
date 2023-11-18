@@ -9,10 +9,12 @@ class CarInLine(admin.TabularInline):
 
 class PersonAdmin(admin.ModelAdmin):
   list_display=("driver_id", "name", "address")
+  search_fields = ["model","name"]
   inlines = (CarInLine,)
 
 class CarAdmin(admin.ModelAdmin):
   list_display=("license", "model", "year", "person")
+  search_fields = ["model","name"]
 
 admin.site.register(Person, PersonAdmin)
 admin.site.register(Car, CarAdmin)
