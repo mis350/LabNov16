@@ -21,14 +21,15 @@
       <td align="center">Owner Name</td>
     </tr>
     <br>
-    {% for c in allc%}
+
+    
     <tr>
-      <td align="center">{{ c.license }}</td>
-      <td align="center">{{ c.model }}</td>
-      <td align="center">{{ c.year }}</td>
-      <td align="center">{{ c.person.name }}</td>
+      <td align="center">{{ allc.license }}</td>
+      <td align="center">{{ allc.model }}</td>
+      <td align="center">{{ allc.year }}</td>
+      <td align="center">{{ allc.person.name }}</td>
     </tr>
-    {% endfor %}
+    
 
   </table>
 </body>
