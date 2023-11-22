@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Information</title>
+</head>
+<body>
+  <table border="1">
+    <tr align="center" bgcolor="Grey">
+      <td colspan="6"><h2>CAR DETAIL for Licsense: {{ search_query }}</h2></td>
+    </tr>
+    
+    <tr bgcolor="LightGrey">
+      <td align="center">License</td>
+      <td align="center">Model</td>
+      <td align="center">Year</td>
+      <td align="center">Owner Name</td>
+    </tr>
+    <tr>
+      <td align="center">{{ allc.license }}</td>
+      <td align="center">{{ allc.get_model_display }}</td>
+      <td align="center">{{ allc.year }}</td>
+      <td align="center">{{ allc.person.name }}</td>
+    </tr>
+  </table>
+  <br><a href="/car/">BACK</a>
+</body>
+</html>
