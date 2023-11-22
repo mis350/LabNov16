@@ -8,12 +8,18 @@
 <body>
     <h1>Welcome To The Vehicles Page</h1>
     <ul>
-        <li>Display All Cars.</li><br>
-        <li>List All BMW Cars.</li><br>
-        <li>List Cars made on the year 2000 & Above.</li><br>
-        <li>List Cars between  1990 & 2000.</li><br>
-        <li>Cars Owned by Mohammad Jamal</li><br>
-        <li>Search Car By License KWT123</li><br>
+        <li><a href="/car/readc/">Display All Cars.</a></li><br>
+        <li><a href="/car/list_bmw_cars/">List All BMW Cars.</a></li><br>
+        <li><a href="/car/list_2000_cars/">List Cars made on the year 2000 & Above.</a></li><br>
+        <li><a href="/car/list_1990_2000/">List Cars Purchased between 1990 & 2000.</a></li><br>
+        <li><a href="/car/list_cars_Mohammad_Jamal/">Cars Owned by Mohammad Jamal.</a></li><br>
+        <li>Search By License</li><br>
     </ul>
+    <form method="post" action="{% url 'greeting' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
 </body>
 </html>
